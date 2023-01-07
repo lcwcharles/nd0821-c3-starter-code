@@ -6,15 +6,17 @@ import time
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import joblib
-import sys
-sys.path.append('../..')
+# import sys
+# # sys.path.append('../..')
+# print(sys.path)
 from starter.starter.ml import data, model
+# from ml import data, model
 # from starter.starter.ml.model import train_model, compute_model_metrics, inference
 # from starter.starter.ml.data import process_data
 
 # Add the necessary imports for the starter code.
 logging.basicConfig(
-    filename=f"../logs/train_model_{time.strftime('%b_%d_%Y_%H_%M_%S')}.log",
+    filename=f"starter/logs/train_model_{time.strftime('%b_%d_%Y_%H_%M_%S')}.log",
     level=logging.INFO,
     filemode='w',
     format='%(name)s - %(levelname)s - %(message)s')
@@ -47,7 +49,7 @@ def save_model(df_model, path):
 
 if __name__ == '__main__':
     ## os.path.split(__file__)[0]
-    path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '..')), 
+    path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
             'data', 'census_clean.csv')
     # print(path)
     df = import_data(path)
@@ -60,19 +62,19 @@ if __name__ == '__main__':
     cat_features = [
         "workclass",
         "education",
-        "marital-status",
+        "marital_status",
         "occupation",
         "relationship",
         "race",
         "sex",
-        "native-country",
+        "native_country",
     ]
     X_train, y_train, encoder, lb = data.process_data(
         train, categorical_features=cat_features, label="salary", training=True
     )
 
     # Proces the test data with the process_data function.
-    X_test, y_test, encoder, lb = data.process_data(
+    X_test, y_test, _, _ = data.process_data(
         test, categorical_features=cat_features, label="salary", training=False, 
         encoder=encoder, lb=lb
     )
@@ -91,16 +93,16 @@ if __name__ == '__main__':
 
     # Save model 
     model_dir = 'model'
-    model_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '..')), 
+    model_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
                  model_dir, 'model.pkl')
     # print(model_path)
     save_model(trained_model, model_path)
     logging.info('Save the model to %s - %s', model_path, time.strftime('%b_%d_%Y_%H_%M_%S'))
 
     # Save encoder and binarizer
-    binarizer_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '..')),
+    binarizer_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
                      model_dir, 'model_lb.pkl')
     joblib.dump(lb, open(binarizer_path, 'wb'))
-    encoder_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), '..')), 
+    encoder_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
                     model_dir, 'model_encoder.pkl')
     joblib.dump(encoder, open(encoder_path, 'wb'))

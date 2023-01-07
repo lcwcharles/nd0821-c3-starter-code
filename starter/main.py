@@ -64,15 +64,13 @@ async def welcome():
 # Defining a POST request performing model inference
 @app.post("/inference")
 async def perform_inference(input_data: Attributes):
-    # return input_data
     df_model = joblib.load(open(os.path.join(os.path.abspath(os.getcwd()), 
             "starter", "model", "model.pkl"), 'rb'))
-    # return input_data
     encoder = joblib.load(open(os.path.join(os.path.abspath(os.getcwd()), 
             "starter", "model", "model_encoder.pkl"), 'rb'))
     lb = joblib.load(open(os.path.join(os.path.abspath(os.getcwd()), 
             "starter", "model", "model_lb.pkl"), 'rb'))
-    # return input_data
+
     # df_data = pd.DataFrame.from_dict([input_data])
     # df_data = pd.DataFrame(input_data, index=[0])
     # return df_data
