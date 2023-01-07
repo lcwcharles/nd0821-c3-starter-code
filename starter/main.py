@@ -7,6 +7,7 @@ import pandas as pd
 import os
 import joblib
 import numpy as np
+import uvicorn
 
 import sys
 sys.path.insert(1, './starter')
@@ -107,3 +108,6 @@ async def perform_inference(input_data: Attributes):
     preds = model.inference(df_model, X)
     prediction = lb.inverse_transform(preds)[0]
     return prediction
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8080)
