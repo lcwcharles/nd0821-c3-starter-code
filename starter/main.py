@@ -1,15 +1,18 @@
 # Put the code for your API here.
 from fastapi import FastAPI
-# import sys
-# sys.path.append('..')
-# print(sys.path)
-from starter.starter.ml import data, model
+
 from pydantic import BaseModel, Field
 from typing import Union
 import pandas as pd
 import os
 import joblib
 import numpy as np
+
+import sys
+sys.path.insert(1, './starter')
+sys.path.append('./starter/starter')
+from ml import data, model
+
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("dvc config core.no_scm true")
     if os.system("dvc pull") != 0:
@@ -71,9 +74,7 @@ async def perform_inference(input_data: Attributes):
     lb = joblib.load(open(os.path.join(os.path.abspath(os.getcwd()), 
             "starter", "model", "model_lb.pkl"), 'rb'))
 
-    # df_data = pd.DataFrame.from_dict([input_data])
-    # df_data = pd.DataFrame(input_data, index=[0])
-    # return df_data
+
     cat_features = [
         "workclass",
         "education",
@@ -90,7 +91,9 @@ async def perform_inference(input_data: Attributes):
                         input_data.relationship, input_data.race, input_data.sex, 
                         input_data.capital_gain, input_data.capital_loss, 
                         input_data.hours_per_week, input_data.native_country]])
-    
+    # df_data = pd.DataFrame.from_dict([input_data])
+    # df_data = pd.DataFrame(input_data, index=[0])
+    # return df_data
     # return str(type(df_data))
     df_data = pd.DataFrame(df_data, columns=[
         "age", "workclass", "fnlgt", "education", "education_num", "marital_status", 
