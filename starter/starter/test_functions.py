@@ -24,7 +24,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 logging.basicConfig(
-    filename=f"../logs/deploy_machine_learning_test_{time.strftime('%b_%d_%Y_%H_%M_%S')}.log",
+    filename=f"starter/logs/deploy_machine_learning_test_{time.strftime('%b_%d_%Y_%H_%M_%S')}.log",
     level=logging.INFO,
     filemode='w',
     format='%(name)s - %(levelname)s - %(message)s')
