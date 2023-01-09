@@ -6,9 +6,9 @@ returns both the result of model inference and the status code
 import requests
 
 request_data = {
-    "age": 141297,
+    "age": 30,
     "workclass": "State-gov",
-    "fnlgt": 77516,
+    "fnlgt": 141297,
     "education": "Bachelors",
     "education_num": 13,
     "marital_status": "Married-civ-spouse",

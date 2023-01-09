@@ -22,11 +22,11 @@ The dataset was extracted by Barry Becker from the 1994 Census database.More inf
 ## Metrics
 
 The model's performance on those metrics:
-precision:  0.7318
+precision:  0.7307
 
-recall:  0.6196
+recall:  0.6262
 
-f_beta:  0.6711
+f_beta:  0.6744
 
 ## Ethical Considerations
 
