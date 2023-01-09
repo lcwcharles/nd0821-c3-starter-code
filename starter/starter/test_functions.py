@@ -4,19 +4,16 @@ date: 11.28.2022
 author: Charles
 '''
 
-
-import pytest
-import joblib
 import os
 import logging
 import time
 import pandas as pd
 from sklearn.model_selection import train_test_split
-# import joblib
 import sys
-sys.path.append('../..')
-from starter.starter import train_model
-from starter.starter.ml import model, data
+sys.path.insert(1, './starter')
+sys.path.append('./starter/starter')
+from train_model import save_model
+from ml import model, data
 # from starter.starter.ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
 # from sklearn.linear_model import LogisticRegression
@@ -86,25 +83,25 @@ def test_import():
         raise err
 
 # @pytest.fixture()
-def test_prosess_data():
+def test_process_data():
     '''
-    test encoder helper
+    test process data function in data.py
     '''
     try:
         X_train, y_train, X_test, y_test = cencus_data(path())
-        trained_model = model.train_model(X_train, y_train)
+        # trained_model = model.train_model(X_train, y_train)
         # print(X_train.shape, y_train.shape)
         assert X_train.shape[0] ==  y_train.shape[0]
         logging.info(
-            "Testing prosess_data: SUCCESS - %s", time.strftime('%b_%d_%Y_%H_%M_%S'))
+            "Testing process_data: SUCCESS - %s", time.strftime('%b_%d_%Y_%H_%M_%S'))
     except AssertionError as err:
-        logging.error("Testing prosess_data ERROR - %s", time.strftime('%b_%d_%Y_%H_%M_%S'))
+        logging.error("Testing process_data ERROR - %s", time.strftime('%b_%d_%Y_%H_%M_%S'))
         raise err
 
 # @pytest.fixture()
 def test_train_model():
     '''
-    test train and save model function
+    test train model function
     '''
     try:
         X_train, y_train, X_test, y_test = cencus_data(path())
@@ -123,7 +120,7 @@ def test_train_model():
 # @pytest.fixture()
 def test_save_model():
     '''
-    test train and save model function
+    test save model function
     '''
     try:
         X_train, y_train, X_test, y_test = cencus_data(path())
@@ -132,7 +129,7 @@ def test_save_model():
         model_dir = 'model'
         model_path = os.path.join(os.path.abspath(os.path.join(os.getcwd(), 'starter')), 
                  model_dir, 'model.pkl')
-        train_model.save_model(trained_model, model_path)
+        save_model(trained_model, model_path)
         if os.path.exists(model_path):
             # assert Path(image_folder).exists()
             logging.info(

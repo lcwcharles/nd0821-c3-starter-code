@@ -1,4 +1,3 @@
-import json
 from fastapi.testclient import TestClient
 import sys
 sys.path.insert(1, '.')

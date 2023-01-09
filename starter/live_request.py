@@ -22,7 +22,7 @@ request_data = {
     "native_country": "India"           
 }
 
-resp = requests.post("http://127.0.0.1:8000/inference", json=request_data)
+resp = requests.post("https://deploy-app-g6a7.onrender.com/inference", json=request_data)
 
 print(resp.status_code)
 print(resp.json())

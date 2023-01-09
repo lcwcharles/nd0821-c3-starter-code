@@ -35,7 +35,7 @@ def import_data(path):
 
 def train_model(input_arr, output_arr):
     '''
-    train the data and return it
+    train the data and return the model
     '''
     trained_model = model.train_model(input_arr, output_arr)
     return trained_model
