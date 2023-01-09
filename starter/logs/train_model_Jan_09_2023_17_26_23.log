@@ -1,8 +1,0 @@
-root - INFO - Training model - Jan_09_2023_17_26_23
-root - INFO - precision:  0.7307404637247569 - Jan_09_2023_17_26_24
-root - INFO - recall:  0.6262820512820513 - Jan_09_2023_17_26_24
-root - INFO - f_beta:  0.6744908526061443 - Jan_09_2023_17_26_24
-root - INFO - Save the model to /home/congwei/nd0821-c3-starter-code/starter/model/model.pkl - Jan_09_2023_17_26_24
-root - INFO - Save the encoder to /home/congwei/nd0821-c3-starter-code/starter/model/model_encoder.pkl - Jan_09_2023_17_26_24
-root - INFO - Save the binarizer to /home/congwei/nd0821-c3-starter-code/starter/model/model_lb.pkl - Jan_09_2023_17_26_24
-root - INFO - Save the slice_output.txt to /home/congwei/nd0821-c3-starter-code/starter/model/slice_output.txt - Jan_09_2023_17_26_25

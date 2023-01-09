@@ -11,7 +11,7 @@ client = TestClient(app)
 def test_welcome():
     resp = client.get("http://127.0.0.1:8000/")
     assert resp.status_code == 200
-    assert resp.json() == {"greeting": "Welcome!"}
+    assert resp.json() == {"Welcome to machine learning!"}
 
 # Testing POST for prediction <= 50k
 def test_inference_less_than_50k():

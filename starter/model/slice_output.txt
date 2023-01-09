@@ -1,79 +1,79 @@
 Feature: workclass
-Value: Private, Precision: 0.7384615384615385, Recall: 0.6208955223880597, F-beta score: 0.6745945945945946
-Value: Self-emp-not-inc, Precision: 0.6396396396396397, Recall: 0.5298507462686567, F-beta score: 0.5795918367346939
-Value: State-gov, Precision: 0.6935483870967742, Recall: 0.6615384615384615, F-beta score: 0.6771653543307087
-Value: Federal-gov, Precision: 0.8028169014084507, Recall: 0.7702702702702703, F-beta score: 0.7862068965517242
-Value: Local-gov, Precision: 0.6698113207547169, Recall: 0.5966386554621849, F-beta score: 0.6311111111111112
-Value: Self-emp-inc, Precision: 0.8214285714285714, Recall: 0.7796610169491526, F-beta score: 0.8
-Value: ?, Precision: 0.6333333333333333, Recall: 0.4222222222222222, F-beta score: 0.5066666666666666
+Value: Private, Precision: 0.7364705882352941, Recall: 0.6228855721393035, F-beta score: 0.674932614555256
+Value: Self-emp-not-inc, Precision: 0.6422018348623854, Recall: 0.5223880597014925, F-beta score: 0.5761316872427983
+Value: State-gov, Precision: 0.7142857142857143, Recall: 0.6923076923076923, F-beta score: 0.7031250000000001
+Value: Federal-gov, Precision: 0.8082191780821918, Recall: 0.7972972972972973, F-beta score: 0.802721088435374
+Value: Local-gov, Precision: 0.7, Recall: 0.5882352941176471, F-beta score: 0.6392694063926941
+Value: Self-emp-inc, Precision: 0.8272727272727273, Recall: 0.7711864406779662, F-beta score: 0.7982456140350878
+Value: ?, Precision: 0.6923076923076923, Recall: 0.4, F-beta score: 0.5070422535211268
 Value: Never-worked, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Without-pay, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 --------------------
 Feature: education
-Value: Masters, Precision: 0.7990196078431373, Recall: 0.8858695652173914, F-beta score: 0.8402061855670103
-Value: Some-college, Precision: 0.6740088105726872, Recall: 0.5387323943661971, F-beta score: 0.598825831702544
-Value: Bachelors, Precision: 0.7609195402298851, Recall: 0.7471783295711061, F-beta score: 0.7539863325740319
-Value: Assoc-acdm, Precision: 0.6206896551724138, Recall: 0.5538461538461539, F-beta score: 0.5853658536585366
-Value: HS-grad, Precision: 0.6359223300970874, Recall: 0.38529411764705884, F-beta score: 0.47985347985347987
+Value: Masters, Precision: 0.8, Recall: 0.8913043478260869, F-beta score: 0.8431876606683805
+Value: Some-college, Precision: 0.6875, Recall: 0.5422535211267606, F-beta score: 0.6062992125984253
+Value: Bachelors, Precision: 0.7703016241299304, Recall: 0.7494356659142212, F-beta score: 0.7597254004576659
+Value: Assoc-acdm, Precision: 0.6428571428571429, Recall: 0.5538461538461539, F-beta score: 0.5950413223140496
+Value: HS-grad, Precision: 0.624390243902439, Recall: 0.3764705882352941, F-beta score: 0.46972477064220175
 Value: 1st-4th, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
-Value: 12th, Precision: 0.6666666666666666, Recall: 0.4, F-beta score: 0.5
+Value: 12th, Precision: 0.5, Recall: 0.4, F-beta score: 0.4444444444444445
 Value: 11th, Precision: 1.0, Recall: 0.2727272727272727, F-beta score: 0.42857142857142855
 Value: 9th, Precision: 1.0, Recall: 0.14285714285714285, F-beta score: 0.25
-Value: 10th, Precision: 0.6666666666666666, Recall: 0.18181818181818182, F-beta score: 0.28571428571428575
+Value: 10th, Precision: 0.5, Recall: 0.18181818181818182, F-beta score: 0.26666666666666666
 Value: Preschool, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
-Value: Assoc-voc, Precision: 0.6833333333333333, Recall: 0.5774647887323944, F-beta score: 0.6259541984732825
-Value: Doctorate, Precision: 0.8076923076923077, Recall: 0.875, F-beta score: 0.8400000000000001
+Value: Assoc-voc, Precision: 0.7368421052631579, Recall: 0.5915492957746479, F-beta score: 0.65625
+Value: Doctorate, Precision: 0.7777777777777778, Recall: 0.875, F-beta score: 0.823529411764706
 Value: Prof-school, Precision: 0.8433734939759037, Recall: 0.9210526315789473, F-beta score: 0.8805031446540881
-Value: 7th-8th, Precision: 1.0, Recall: 0.2222222222222222, F-beta score: 0.3636363636363636
+Value: 7th-8th, Precision: 0.75, Recall: 0.3333333333333333, F-beta score: 0.46153846153846156
 Value: 5th-6th, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
 --------------------
 Feature: marital_status
-Value: Divorced, Precision: 0.7142857142857143, Recall: 0.37037037037037035, F-beta score: 0.4878048780487805
-Value: Married-civ-spouse, Precision: 0.7248376623376623, Recall: 0.6674140508221226, F-beta score: 0.6949416342412451
-Value: Never-married, Precision: 0.8333333333333334, Recall: 0.4368932038834951, F-beta score: 0.5732484076433121
+Value: Divorced, Precision: 0.6956521739130435, Recall: 0.3950617283950617, F-beta score: 0.5039370078740157
+Value: Married-civ-spouse, Precision: 0.7293540474243663, Recall: 0.6666666666666666, F-beta score: 0.6966028894962905
+Value: Never-married, Precision: 0.8679245283018868, Recall: 0.44660194174757284, F-beta score: 0.5897435897435898
 Value: Widowed, Precision: 1.0, Recall: 0.26666666666666666, F-beta score: 0.4210526315789474
 Value: Separated, Precision: 1.0, Recall: 0.35714285714285715, F-beta score: 0.5263157894736842
 Value: Married-spouse-absent, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
 Value: Married-AF-spouse, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
 --------------------
 Feature: occupation
-Value: Prof-specialty, Precision: 0.7777777777777778, Recall: 0.7777777777777778, F-beta score: 0.7777777777777778
-Value: Craft-repair, Precision: 0.6266666666666667, Recall: 0.47959183673469385, F-beta score: 0.5433526011560694
-Value: Exec-managerial, Precision: 0.7908163265306123, Recall: 0.7969151670951157, F-beta score: 0.793854033290653
-Value: Other-service, Precision: 0.8, Recall: 0.11428571428571428, F-beta score: 0.19999999999999998
-Value: Protective-serv, Precision: 0.5142857142857142, Recall: 0.43902439024390244, F-beta score: 0.4736842105263158
-Value: Sales, Precision: 0.7321428571428571, Recall: 0.6, F-beta score: 0.6595174262734584
-Value: Adm-clerical, Precision: 0.6164383561643836, Recall: 0.4945054945054945, F-beta score: 0.548780487804878
-Value: Transport-moving, Precision: 0.7096774193548387, Recall: 0.3333333333333333, F-beta score: 0.45360824742268047
-Value: Handlers-cleaners, Precision: 0.5, Recall: 0.1875, F-beta score: 0.2727272727272727
-Value: Tech-support, Precision: 0.7758620689655172, Recall: 0.6923076923076923, F-beta score: 0.7317073170731708
-Value: ?, Precision: 0.6333333333333333, Recall: 0.4222222222222222, F-beta score: 0.5066666666666666
+Value: Prof-specialty, Precision: 0.792507204610951, Recall: 0.7834757834757835, F-beta score: 0.7879656160458454
+Value: Craft-repair, Precision: 0.6363636363636364, Recall: 0.5, F-beta score: 0.56
+Value: Exec-managerial, Precision: 0.7917737789203085, Recall: 0.7917737789203085, F-beta score: 0.7917737789203085
+Value: Other-service, Precision: 0.5714285714285714, Recall: 0.11428571428571428, F-beta score: 0.19047619047619044
+Value: Protective-serv, Precision: 0.5151515151515151, Recall: 0.4146341463414634, F-beta score: 0.4594594594594595
+Value: Sales, Precision: 0.7393939393939394, Recall: 0.5951219512195122, F-beta score: 0.6594594594594595
+Value: Adm-clerical, Precision: 0.625, Recall: 0.4945054945054945, F-beta score: 0.5521472392638037
+Value: Transport-moving, Precision: 0.65625, Recall: 0.3181818181818182, F-beta score: 0.4285714285714286
+Value: Handlers-cleaners, Precision: 0.4, Recall: 0.125, F-beta score: 0.19047619047619047
+Value: Tech-support, Precision: 0.8166666666666667, Recall: 0.7538461538461538, F-beta score: 0.784
+Value: ?, Precision: 0.6923076923076923, Recall: 0.4, F-beta score: 0.5070422535211268
 Value: Farming-fishing, Precision: 0.42857142857142855, Recall: 0.25, F-beta score: 0.3157894736842105
-Value: Machine-op-inspct, Precision: 0.5806451612903226, Recall: 0.375, F-beta score: 0.4556962025316456
+Value: Machine-op-inspct, Precision: 0.5, Recall: 0.3541666666666667, F-beta score: 0.4146341463414634
 Value: Priv-house-serv, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Armed-Forces, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 --------------------
 Feature: relationship
-Value: Unmarried, Precision: 0.8823529411764706, Recall: 0.3409090909090909, F-beta score: 0.4918032786885246
-Value: Husband, Precision: 0.727024567788899, Recall: 0.676545300592718, F-beta score: 0.7008771929824562
-Value: Not-in-family, Precision: 0.7790697674418605, Recall: 0.4036144578313253, F-beta score: 0.5317460317460317
-Value: Wife, Precision: 0.7, Recall: 0.6026490066225165, F-beta score: 0.6476868327402135
+Value: Unmarried, Precision: 0.7727272727272727, Recall: 0.38636363636363635, F-beta score: 0.515151515151515
+Value: Husband, Precision: 0.7320441988950276, Recall: 0.6731583403895004, F-beta score: 0.7013674459638288
+Value: Not-in-family, Precision: 0.8, Recall: 0.40963855421686746, F-beta score: 0.5418326693227091
+Value: Wife, Precision: 0.7045454545454546, Recall: 0.6158940397350994, F-beta score: 0.657243816254417
 Value: Own-child, Precision: 1.0, Recall: 0.4, F-beta score: 0.5714285714285715
-Value: Other-relative, Precision: 1.0, Recall: 0.125, F-beta score: 0.2222222222222222
+Value: Other-relative, Precision: 1.0, Recall: 0.25, F-beta score: 0.4
 --------------------
 Feature: race
-Value: White, Precision: 0.7300163132137031, Recall: 0.6311706629055007, F-beta score: 0.6770045385779123
-Value: Asian-Pac-Islander, Precision: 0.7441860465116279, Recall: 0.6037735849056604, F-beta score: 0.6666666666666666
-Value: Black, Precision: 0.75, Recall: 0.569620253164557, F-beta score: 0.6474820143884893
+Value: White, Precision: 0.7372742200328407, Recall: 0.6332863187588152, F-beta score: 0.6813353566009105
+Value: Asian-Pac-Islander, Precision: 0.7021276595744681, Recall: 0.6226415094339622, F-beta score: 0.66
+Value: Black, Precision: 0.7288135593220338, Recall: 0.5443037974683544, F-beta score: 0.6231884057971013
 Value: Amer-Indian-Eskimo, Precision: 0.75, Recall: 0.5, F-beta score: 0.6
-Value: Other, Precision: 0.5, Recall: 0.5, F-beta score: 0.5
+Value: Other, Precision: 0.6666666666666666, Recall: 0.5, F-beta score: 0.5714285714285715
 --------------------
 Feature: sex
-Value: Female, Precision: 0.7222222222222222, Recall: 0.5043103448275862, F-beta score: 0.5939086294416244
-Value: Male, Precision: 0.7319148936170212, Recall: 0.6475903614457831, F-beta score: 0.6871753895325609
+Value: Female, Precision: 0.7228915662650602, Recall: 0.5172413793103449, F-beta score: 0.6030150753768845
+Value: Male, Precision: 0.7373390557939914, Recall: 0.6468373493975904, F-beta score: 0.6891295627757722
 --------------------
 Feature: native_country
-Value: United-States, Precision: 0.7327935222672065, Recall: 0.6284722222222222, F-beta score: 0.6766355140186916
+Value: United-States, Precision: 0.7378246753246753, Recall: 0.63125, F-beta score: 0.6803892215568862
 Value: Cambodia, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: ?, Precision: 0.6666666666666666, Recall: 0.5714285714285714, F-beta score: 0.6153846153846153
 Value: Mexico, Precision: 1.0, Recall: 0.46153846153846156, F-beta score: 0.631578947368421
@@ -82,27 +82,27 @@ Value: Italy, Precision: 1.0, Recall: 0.5, F-beta score: 0.6666666666666666
 Value: Ecuador, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Taiwan, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Japan, Precision: 0.3333333333333333, Recall: 0.5, F-beta score: 0.4
-Value: Philippines, Precision: 0.7142857142857143, Recall: 0.7142857142857143, F-beta score: 0.7142857142857143
-Value: Germany, Precision: 0.75, Recall: 0.6666666666666666, F-beta score: 0.7058823529411765
-Value: Cuba, Precision: 0.6666666666666666, Recall: 0.5, F-beta score: 0.5714285714285715
-Value: Iran, Precision: 0.6666666666666666, Recall: 0.6666666666666666, F-beta score: 0.6666666666666666
-Value: China, Precision: 0.6, Recall: 0.6, F-beta score: 0.6
+Value: Philippines, Precision: 0.8333333333333334, Recall: 0.7142857142857143, F-beta score: 0.7692307692307692
+Value: Germany, Precision: 0.7142857142857143, Recall: 0.5555555555555556, F-beta score: 0.6250000000000001
+Value: Cuba, Precision: 0.5, Recall: 0.5, F-beta score: 0.5
+Value: Iran, Precision: 0.5, Recall: 0.6666666666666666, F-beta score: 0.5714285714285715
+Value: China, Precision: 0.42857142857142855, Recall: 0.6, F-beta score: 0.5
 Value: Canada, Precision: 1.0, Recall: 0.5, F-beta score: 0.6666666666666666
 Value: El-Salvador, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Vietnam, Precision: 0.0, Recall: 0.0, F-beta score: 0.0
 Value: Portugal, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
-Value: Jamaica, Precision: 1.0, Recall: 0.5, F-beta score: 0.6666666666666666
+Value: Jamaica, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
 Value: Peru, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Puerto-Rico, Precision: 0.0, Recall: 0.0, F-beta score: 0.0
 Value: Poland, Precision: 0.5, Recall: 1.0, F-beta score: 0.6666666666666666
 Value: Outlying-US(Guam-USVI-etc), Precision: 1.0, Recall: 1.0, F-beta score: 1.0
-Value: Yugoslavia, Precision: 0.3333333333333333, Recall: 1.0, F-beta score: 0.5
+Value: Yugoslavia, Precision: 0.5, Recall: 1.0, F-beta score: 0.6666666666666666
 Value: Columbia, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: South, Precision: 0.6666666666666666, Recall: 0.6666666666666666, F-beta score: 0.6666666666666666
 Value: Haiti, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Thailand, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
 Value: Guatemala, Precision: 1.0, Recall: 0.0, F-beta score: 0.0
-Value: England, Precision: 0.5, Recall: 0.5, F-beta score: 0.5
+Value: England, Precision: 0.6666666666666666, Recall: 0.5, F-beta score: 0.5714285714285715
 Value: Honduras, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Hungary, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Dominican-Republic, Precision: 0.0, Recall: 0.0, F-beta score: 0.0
@@ -111,7 +111,7 @@ Value: Nicaragua, Precision: 0.0, Recall: 1.0, F-beta score: 0.0
 Value: France, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Laos, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Ireland, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
-Value: Greece, Precision: 0.5, Recall: 1.0, F-beta score: 0.6666666666666666
+Value: Greece, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 Value: Hong, Precision: 1.0, Recall: 0.5, F-beta score: 0.6666666666666666
 Value: Trinadad&Tobago, Precision: 1.0, Recall: 1.0, F-beta score: 1.0
 --------------------
