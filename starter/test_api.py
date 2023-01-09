@@ -9,9 +9,9 @@ client = TestClient(app)
 
 # Testing GET
 def test_welcome():
-    r = client.get("http://127.0.0.1:8000/")
-    assert r.status_code == 200
-    assert r.json() == {"greeting": "Welcome!"}
+    resp = client.get("http://127.0.0.1:8000/")
+    assert resp.status_code == 200
+    assert resp.json() == {"greeting": "Welcome!"}
 
 # Testing POST for prediction <= 50k
 def test_inference_less_than_50k():
@@ -32,10 +32,8 @@ def test_inference_less_than_50k():
         "native_country": "United-States"           
     }
     resp = client.post("http://127.0.0.1:8000/inference", json=attributes)
-    resp_str = resp.json()
-    print(resp_str)
     assert resp.status_code == 200
-    assert resp_str == "<=50K"
+    assert resp.json() == "<=50K"
 
 
 # Testing POST for prediction > 50k
@@ -71,6 +69,5 @@ def test_inference_greater_than_50k():
         "native_country": "United-States"
     }
     resp = client.post("http://127.0.0.1:8000/inference", json=attributes)
-    resp_str = resp.json()
     assert resp.status_code == 200
-    assert resp_str == ">50K"
+    assert resp.json() == ">50K"

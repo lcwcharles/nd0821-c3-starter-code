@@ -1,8 +1,7 @@
 # Put the code for your API here.
 from fastapi import FastAPI
 
-from pydantic import BaseModel, Field
-from typing import Union
+from pydantic import BaseModel
 import pandas as pd
 import os
 import joblib
@@ -63,7 +62,7 @@ app = FastAPI()
 # Defining a GET on the specified endpoint
 @app.get("/")
 async def welcome():
-    return {"greeting": "Welcome!"}
+    return {"Welcome to machine learning!"}
 
 # Defining a POST request performing model inference
 @app.post("/inference")

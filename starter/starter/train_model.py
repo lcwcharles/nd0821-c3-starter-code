@@ -6,10 +6,10 @@ import time
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import joblib
-# import sys
-# # sys.path.append('../..')
-# print(sys.path)
-from starter.starter.ml import data, model
+import sys
+sys.path.insert(1, './starter')
+sys.path.append('./starter/starter')
+from ml import data, model
 # from ml import data, model
 # from starter.starter.ml.model import train_model, compute_model_metrics, inference
 # from starter.starter.ml.data import process_data
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     # data_df = df.drop_duplicates()
 
     # Optional enhancement, use K-fold cross validation instead of a train-test split.
-    train, test = train_test_split(df, test_size=0.20)
+    train, test = train_test_split(df, test_size=0.20, random_state=20)
 
     cat_features = [
         "workclass",
@@ -100,9 +100,37 @@ if __name__ == '__main__':
     logging.info('Save the model to %s - %s', model_path, time.strftime('%b_%d_%Y_%H_%M_%S'))
 
     # Save encoder and binarizer
-    binarizer_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
-                     model_dir, 'model_lb.pkl')
-    joblib.dump(lb, open(binarizer_path, 'wb'))
     encoder_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
                     model_dir, 'model_encoder.pkl')
     joblib.dump(encoder, open(encoder_path, 'wb'))
+    logging.info('Save the encoder to %s - %s', encoder_path, time.strftime('%b_%d_%Y_%H_%M_%S'))
+
+    binarizer_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
+                     model_dir, 'model_lb.pkl')
+    joblib.dump(lb, open(binarizer_path, 'wb'))
+    logging.info('Save the binarizer to %s - %s', binarizer_path, time.strftime('%b_%d_%Y_%H_%M_%S'))
+
+    slice_path = os.path.join(os.path.abspath(os.getcwd()), 'starter',
+                     model_dir, 'slice_output.txt')
+    with open(slice_path, 'w') as file:
+        for feature in cat_features:
+            # print(feature)
+            file.write(f'Feature: {feature}\n')
+            for f_value in test[feature].unique():
+                # print(f_value)
+                slice_df = test[test[feature] == f_value]
+                X_slice, y_slice, _, _ = data.process_data(
+                    slice_df,
+                    categorical_features=cat_features,
+                    label="salary", training=False,
+                    encoder=encoder, lb=lb)
+                predictions_slice = model.inference(trained_model, X_slice)
+                precision_slice, recall_slice, f_beta_slice = model.compute_model_metrics(
+                    y_slice, predictions_slice)
+                # file.write('Value: '+ f_value + ', Precision: ' + str(precision_slice)
+                        #  + ', Recall: ' + str(recall_slice) + ', F-beta score: ' + str(f_beta_slice))
+                file.write(f'Value: {f_value}' + f', Precision: {precision_slice}'
+                    + f', Recall: {recall_slice}' + f', F-beta score: {f_beta_slice}\n')
+            file.write('--------------------\n')
+        file.close()
+        logging.info('Save the slice_output.txt to %s - %s', slice_path, time.strftime('%b_%d_%Y_%H_%M_%S'))

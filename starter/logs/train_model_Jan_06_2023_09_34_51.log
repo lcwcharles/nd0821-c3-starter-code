@@ -1,5 +1,0 @@
-root - INFO - Training model - Jan_06_2023_09_34_51
-root - INFO - precision:  0.7417664670658682 - Jan_06_2023_09_34_53
-root - INFO - recall:  0.6264222503160556 - Jan_06_2023_09_34_53
-root - INFO - f_beta:  0.6792323509252912 - Jan_06_2023_09_34_53
-root - INFO - Save the model to /home/congwei/nd0821-c3-starter-code/starter/model/model.pkl - Jan_06_2023_09_34_53
